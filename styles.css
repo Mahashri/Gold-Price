@@ -172,12 +172,23 @@ h2 {
 
 /* For mobile view */
 
+
+/* For mobile view */
+
 @media only screen and (max-width: 767px) {
-    .container,
+    .container {
+        width: 100%;
+        margin: 20px auto;
+        /* Center the containers */
+        max-width: 200px;
+        /* Adjust the maximum width */
+    }
     .year-container {
         width: 100%;
-        margin: 20px 0;
-        max-width: none;
+        margin: 20px auto;
+        /* Center the containers */
+        max-width: 200px;
+        /* Adjust the maximum width */
     }
 }
 
