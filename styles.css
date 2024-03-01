@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* Initial color */
+    animation: pulseBackground 10s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-image: linear-gradient(45deg, rgba(255, 215, 0, 0.5), rgba(211, 190, 72, 0.8), rgba(236, 231, 203, 0.5));
+    /* Metallic gold gradient */
+    background-size: 400% 400%;
+    /* Larger background size for animation */
+    animation-name: shimmer;
+    /* Start shimmer animation */
+    animation-duration: 2s;
+    /* Shimmer animation duration */
+    animation-timing-function: ease-in-out;
+    /* Shimmer animation timing function */
+    animation-iteration-count: infinite;
+    /* Shimmer animation iteration count */
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 0% 50%;
+        /* Start position for shimmer animation */
+    }
+    100% {
+        background-position: 100% 50%;
+        /* End position for shimmer animation */
+    }
+}
+
+.neon-sign {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: #f31c6e;
+    text-shadow: 0 0 10px #ece222, 0 0 20px #eede2f, 0 0 30px #f2f24c, 0 0 40px #e6f171, 0 0 50px #e7eea1, 0 0 60px #d7ea9f, 0 0 70px #4CAF50, 0 0 100px #4CAF50;
+    animation: animate 3s linear infinite;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 90%;
+    max-width: 800px;
+}
+
+.container {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 20px auto;
+    transition: all 0.3s ease;
+}
+
+.year-container {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 20px auto;
+    transition: all 0.3s ease;
+}
+
+.container:hover,
+.year-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.price-display {
+    margin: 20px 0;
+    font-size: 20px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.gold-icon {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.gold-info-container {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@keyframes animate {
+    0% {
+        filter: blur(1px);
+        opacity: 5.3;
+    }
+    50% {
+        filter: blur(0.5px);
+        opacity: 3.6;
+    }
+    75% {
+        filter: blur(0px);
+        opacity: 1.3;
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 7.3;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container,
+    .year-container {
+        max-width: 600px;
+    }
+    .neon-sign {
+        top: 50px;
+    }
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* Additional styles for the quotes */
+
+.quote-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    height: auto;
+    /* Adjusted */
+    max-height: 200px;
+    /* Adjusted */
+    overflow-y: auto;
+    /* Adjusted */
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #f31c6e;
+    word-wrap: break-word;
+    /* Adjusted */
+}
+
+
+/* For mobile view */
+
+@media only screen and (max-width: 767px) {
+    .container,
+    .year-container {
+        width: 100%;
+        margin: 20px 0;
+        max-width: none;
+    }
+}
+
+
+/* For desktop view */
+
+@media only screen and (min-width: 768px) {
+    .container,
+    .year-container {
+        max-width: 600px;
+    }
+    .neon-sign {
+        top: 50px;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Price Checker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Neon Sign Title -->
+    <div class="neon-sign">Mahashri - Gold Price Checker</div>
+
+    <div class="container">
+        <img src="gold-icon.png" alt="Gold Icon" class="gold-icon">
+        <h1 class="price-display" id="priceDisplay">Fetching gold price...</h1>
+        <button id="refreshButton">Refresh</button>
+    </div>
+
+    <div class="year-container">
+        <h2>Select Year:</h2>
+        <select id="yearSelect">
+            <option value="1983">1983</option>
+            <option value="1984">1984</option>
+            <option value="1985">1985</option>
+            <option value="1986">1986</option>
+            <option value="1987">1987</option>
+            <option value="1988">1988</option>
+            <option value="1989">1989</option>
+            <option value="1990">1990</option>
+            <option value="1991">1991</option>
+            <option value="1992">1992</option>
+            <option value="1993">1993</option>
+            <option value="1994">1994</option>
+            <option value="1995">1995</option>
+            <option value="1996">1996</option>
+            <option value="1997">1997</option>
+            <option value="1998">1998</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+        </select>
+
+
+        <div class="gold-info-container">
+            <h2>Gold Price Information:</h2>
+            <p><strong>22 carat Gold Price:</strong> <span id="22_carat_price">-</span></p>
+            <p><strong>CAGR:</strong> <span id="CAGR">-</span></p>
+        </div>
+    </div>
+    <div class="quote-container" id="quoteContainer"></div>
+    <script src="script.js"></script>
+    <script>
+        // Function to display a random quote
+        function displayRandomQuote() {
+            const quotes = [
+                "Gold is the money of kings; silver is the money of gentlemen; barter is the money of peasants; but debt is the money of slaves. - Norm Franz",
+                "Gold is a treasure, and he who possesses it does all he wishes to in this world and succeeds in helping souls into paradise. - Christopher Columbus",
+                "Gold is a hedge against chaos. - Peter Schiff",
+                "The desire for gold is the most universal and deeply rooted commercial instinct of the human race. - Gerald M. Loeb",
+                "Gold is a way of going long on fear. - Robert T. Kiyosaki",
+                "Gold is the canary in the financial coal mine. - Dan Oliver",
+                "Gold is a currency. It is still, by all evidence, a premier currency, where no fiat currency, including the dollar, can match it. - Alan Greenspan",
+                "Gold is money. Everything else is credit. - J.P. Morgan",
+                "Gold, like the sun, which melts wax, but hardens clay, expands great souls. - Antoine Rivarol",
+                "In the absence of the gold standard, there is no way to protect savings from confiscation through inflation. - Alan Greenspan",
+                "Gold will be around, gold will be money when the dollar and the euro and the yuan and the ringgit are mere memories. - Richard Russell",
+                "I don't like gold. I'm just not interested in it. It does not pay a dividend. - Warren Buffett",
+                "Gold is the only money that has never failed in the 5,000-year history of its use by humans. - Charles Goyette",
+                "When paper money systems begin to crack at the seams, the run to gold could be explosive. - Harry Browne",
+                "Gold is the most beautiful of all commodities; it is the only one that sheds no blood, it is the only one that does not violate any law. - Mahatma Gandhi",
+                "Gold is a timeless asset. It has been used as money for thousands of years. - Michael K. Farr",
+                "Gold is the money of the future. - Richard Nixon",
+                "Gold and silver are money; everything else is credit. - J.P. Morgan",
+                "The gold standard did not collapse. Governments abolished it in order to pave the way for inflation. - Friedrich August von Hayek",
+                "Gold is a constant. It's like the sun, it doesn't move. - Mario Gabelli"
+            ];
+
+
+            const quoteContainer = document.getElementById('quoteContainer');
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+            const quoteElement = document.createElement('p');
+            quoteElement.classList.add('quote');
+            quoteElement.textContent = randomQuote;
+            quoteContainer.appendChild(quoteElement);
+        }
+
+        // Display a random quote when the page loads
+        displayRandomQuote();
+    </script>
+</body>
+
+</html>
