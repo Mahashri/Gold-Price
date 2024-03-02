@@ -169,7 +169,7 @@ h2 {
 @media only screen and (max-width: 767px) {
     .neon-sign {
         top: 20px;
-        font-size: 28px;
+        font-size: 26px;
         /* Adjust the font size as needed */
     }
     .container {
