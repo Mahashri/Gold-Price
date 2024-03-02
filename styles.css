@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 950px;
     text-align: center;
     background-image: linear-gradient(45deg, rgba(255, 215, 0, 0.5), rgba(211, 190, 72, 0.8), rgba(236, 231, 203, 0.5));
     /* Metallic gold gradient */
@@ -59,41 +59,37 @@ body {
 }
 
 .container {
-    position: relative;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: white;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    height: 300px;
+    width: 90%;
+    max-width: 300px;
     transition: all 0.3s ease;
+    margin-top: 140px;
 }
 
 .year-container {
-    position: relative;
-    background-color: #fff;
-    padding: 20px;
+    background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    height: 300px;
-    margin: 20px auto;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-    /* Adjust as needed */
-}
-
-.container:hover,
-.year-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 300px;
+    margin-top: 150px;
+    margin-left: 300px;
+    padding: 20px;
+    text-align: center
 }
 
 .price-display {
     margin: 20px 0;
     font-size: 20px;
     color: black;
-    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
 }
 
@@ -119,7 +115,6 @@ button:hover {
 }
 
 .gold-info-container {
-    font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: bold;
 }
@@ -143,18 +138,7 @@ button:hover {
     }
 }
 
-@media only screen and (min-width: 768px) {
-    .container,
-    .year-container {
-        max-width: 600px;
-    }
-    .neon-sign {
-        top: 50px;
-    }
-}
-
 h2 {
-    font-family: 'Times New Roman', Times, serif;
     font-size: 28px;
 }
 
@@ -169,12 +153,8 @@ h2 {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
     border-top: 1px solid #ccc;
-    height: auto;
-    /* Adjusted */
     max-height: 200px;
-    /* Adjusted */
     overflow-y: auto;
-    /* Adjusted */
 }
 
 .quote {
@@ -182,19 +162,42 @@ h2 {
     margin-bottom: 10px;
     color: #f31c6e;
     word-wrap: break-word;
-    /* Adjusted */
 }
 
 
 /* For mobile view */
 
 @media only screen and (max-width: 767px) {
-    .container,
-    .year-container {
-        width: 90%;
-        max-width: none;
-    }
     .neon-sign {
         top: 20px;
+    }
+    .container {
+        width: 90%;
+        max-width: 90%;
+        margin: 20px auto;
+    }
+    .year-container {
+        width: 90%;
+        max-width: 90%;
+        margin: 20px auto;
+    }
+    .container {
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        margin-top: 200px;
+    }
+    .year-container {
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 20px;
+        text-align: center;
+        margin-top: 300px;
+        margin-left: 200px;
+        width: 300px;
+    }
+    .quote-container {
+        padding: 10px;
     }
 }
