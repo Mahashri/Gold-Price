@@ -5,7 +5,6 @@ body {
     /* Initial color */
     animation: pulseBackground 10s infinite alternate;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 1050px;
     text-align: center;
@@ -139,7 +138,7 @@ button:hover {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 26px;
 }
 
 
@@ -170,6 +169,8 @@ h2 {
 @media only screen and (max-width: 767px) {
     .neon-sign {
         top: 20px;
+        font-size: 28px;
+        /* Adjust the font size as needed */
     }
     .container {
         width: 90%;
