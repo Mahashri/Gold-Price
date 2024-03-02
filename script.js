@@ -72,8 +72,8 @@ document.getElementById('yearSelect').addEventListener('change', function() {
 
 function fetchGoldPrice() {
 
-    const apiKey = 'goldapi-8n0a5cslt8r3qf6-io';
-    const url = 'https://www.goldapi.io/api/XAU/INR';
+    //const apiKey = 'goldapi-8n0a5cslt8r3qf6-io';
+    // const url = 'https://www.goldapi.io/api/XAU/INR';
 
 
     fetch(url, {
@@ -107,3 +107,10 @@ function fetchGoldPrice() {
 fetchGoldPrice();
 
 // Array of quotes
+function updateGoldPriceText() {
+    // Get the selected year from the dropdown
+    const selectedYear = document.getElementById('yearSelect').value;
+
+    // Update the text with the selected year
+    document.getElementById('selectedYear').textContent = selectedYear;
+}
