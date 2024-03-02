@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 950px;
+    height: 1000px;
     text-align: center;
     background-image: linear-gradient(45deg, rgba(255, 215, 0, 0.5), rgba(211, 190, 72, 0.8), rgba(236, 231, 203, 0.5));
     /* Metallic gold gradient */
@@ -193,7 +193,7 @@ h2 {
         border-radius: 15px;
         margin-top: 20px;
         text-align: center;
-        margin-top: 300px;
+        margin-top: 330px;
         margin-left: 200px;
         width: 300px;
     }
