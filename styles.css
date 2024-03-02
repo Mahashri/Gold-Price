@@ -171,6 +171,7 @@ h2 {
         top: 20px;
         font-size: 25px;
         /* Adjust the font size as needed */
+        display: inline-block;
     }
     .container {
         width: 90%;
