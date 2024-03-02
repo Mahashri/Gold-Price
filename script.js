@@ -72,8 +72,8 @@ document.getElementById('yearSelect').addEventListener('change', function() {
 
 function fetchGoldPrice() {
 
-    //const apiKey = 'goldapi-8n0a5cslt8r3qf6-io';
-    // const url = 'https://www.goldapi.io/api/XAU/INR';
+    const apiKey = 'goldapi-8n0a5cslt8r3qf6-io';
+     const url = 'https://www.goldapi.io/api/XAU/INR';
 
 
     fetch(url, {
