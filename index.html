@@ -12,15 +12,53 @@
 
 <body>
     <!-- Neon Sign Title -->
-    <div class="neon-sign">Mahashri - Gold Price Checker</div>
+    <div class="neon-sign">Mahashri <br> Gold Price Checker</div>
 
     <div class="container">
-
         <!-- Title and gold icon -->
         <img src="gold-icon.png" alt="Gold Icon" class="gold-icon">
+        <p> <span id="currentDate"></span><strong>&nbsp;Gold Price</strong></p>
         <h1 class="price-display" id="priceDisplay">Fetching gold price...</h1>
         <button id="refreshButton">Refresh</button>
     </div>
+
+
+
+    <!-- JavaScript to fetch and update gold price -->
+    <script>
+        // Function to format the current date as "MMM DD"
+        function getCurrentDate() {
+            const currentDate = new Date();
+            const options = {
+                month: 'short',
+                day: '2-digit'
+            };
+            return currentDate.toLocaleDateString('en-US', options);
+        }
+
+        // Update the current date display
+        document.getElementById('currentDate').textContent = getCurrentDate();
+
+        // Function to fetch and update the gold price
+        async function fetchGoldPrice() {
+            try {
+                // Simulate fetching data (replace with actual fetch)
+                const goldPrice = await new Promise(resolve => setTimeout(() => resolve(1800), 1000));
+
+                // Update the gold price display
+                // document.getElementById('goldPrice').textContent = '$' + goldPrice;
+            } catch (error) {
+                console.error('Error fetching gold price:', error);
+                document.getElementById('goldPrice').textContent = 'Error fetching gold price';
+            }
+        }
+
+        // Call fetchGoldPrice function when the page loads
+        fetchGoldPrice();
+
+        // Add event listener to refresh button to fetch the gold price again
+        document.getElementById('refreshButton').addEventListener('click', fetchGoldPrice);
+    </script>
 
     <!-- Year container -->
     <div class="year-container">
