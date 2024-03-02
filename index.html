@@ -63,7 +63,7 @@
     <!-- Year container -->
     <div class="year-container">
         <h2>Select Year:</h2>
-        <select id="yearSelect">
+        <select id="yearSelect" onchange="updateGoldPriceText()">
             <option value="1983">1983</option>
             <option value="1984">1984</option>
             <option value="1985">1985</option>
@@ -108,8 +108,8 @@
             <option value="2024">2024</option>
          </select>
         <div class="gold-info-container">
-            <h2>Gold Price Information:</h2>
-            <p><strong>22 carat Gold Price:</strong> <span id="22_carat_price">-</span></p>
+            <h2 id="goldPriceTitle">Gold Price Information:</h2>
+            <p><strong id="goldPriceText">22 carat Gold Price in <span id="selectedYear">YYYY</span>:</strong> <span id="22_carat_price">-</span></p>
             <p><strong>CAGR:</strong> <span id="CAGR">-</span></p>
         </div>
     </div>
