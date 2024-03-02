@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     /* Initial color */
     animation: pulseBackground 10s infinite alternate;
     display: flex;
@@ -34,18 +34,28 @@ body {
     }
 }
 
+
+/* Neon sign effect */
+
 .neon-sign {
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0, 0 0 30px #00fff0, 0 0 40px #00fff0, 0 0 50px #00fff0, 0 0 60px #00fff0, 0 0 70px #00fff0;
+    animation: neon-flicker 1.5s infinite alternate;
     position: absolute;
-    top: 20px;
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 40px;
-    color: #f31c6e;
-    text-shadow: 0 0 10px #ece222, 0 0 20px #eede2f, 0 0 30px #f2f24c, 0 0 40px #e6f171, 0 0 50px #e7eea1, 0 0 60px #d7ea9f, 0 0 70px #4CAF50, 0 0 100px #4CAF50;
-    animation: animate 3s linear infinite;
-    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
-    width: 90%;
-    max-width: 800px;
+}
+
+@keyframes neon-flicker {
+    from {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .container {
@@ -54,8 +64,8 @@ body {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    margin: 20px auto;
+    width: 300px;
+    height: 300px;
     transition: all 0.3s ease;
 }
 
@@ -65,9 +75,12 @@ body {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    width: 300px;
+    height: 300px;
     margin: 20px auto;
     transition: all 0.3s ease;
+    margin-top: 20px;
+    /* Adjust as needed */
 }
 
 .container:hover,
@@ -107,6 +120,8 @@ button:hover {
 
 .gold-info-container {
     font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 @keyframes animate {
@@ -140,6 +155,7 @@ button:hover {
 
 h2 {
     font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
 }
 
 
@@ -172,35 +188,13 @@ h2 {
 
 /* For mobile view */
 
-
-/* For mobile view */
-
 @media only screen and (max-width: 767px) {
-    .container {
-        width: 100%;
-        margin: 20px auto;
-        /* Center the containers */
-        max-width: 200px;
-        /* Adjust the maximum width */
-    }
-    .year-container {
-        width: 100%;
-        margin: 20px auto;
-        /* Center the containers */
-        max-width: 200px;
-        /* Adjust the maximum width */
-    }
-}
-
-
-/* For desktop view */
-
-@media only screen and (min-width: 768px) {
     .container,
     .year-container {
-        max-width: 600px;
+        width: 90%;
+        max-width: none;
     }
     .neon-sign {
-        top: 50px;
+        top: 20px;
     }
 }
