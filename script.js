@@ -92,7 +92,7 @@ function fetchGoldPrice() {
             if (data && data.price) {
                 const priceInINRPerGram = data.price / 29.273;
                 const totalPriceFor8Grams = priceInINRPerGram * 8;
-                document.getElementById('priceDisplay').innerHTML = `1 Gram of Gold: INR ${priceInINRPerGram.toFixed(2)}<br>8 Grams of Gold: INR ${totalPriceFor8Grams.toFixed(2)}`;
+                document.getElementById('priceDisplay').innerHTML = `1 Gram of 22 carat Gold: INR ${priceInINRPerGram.toFixed(2)}<br>8 Grams of 22 carat Gold: INR ${totalPriceFor8Grams.toFixed(2)}`;
             } else {
                 console.error("Error: Invalid response from API");
                 document.getElementById('priceDisplay').textContent = 'Failed to load data.';
