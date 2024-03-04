@@ -12,13 +12,16 @@
 
 <body>
     <!-- Neon Sign Title -->
-    <div class="neon-sign">Mahashri <br> Gold Price Checker</div>
-
+    <div class="neon-sign">Mahashri <br>Gold Price Checker</div>
+    <br>
+    <br>
     <div class="container">
         <!-- Title and gold icon -->
         <img src="gold-icon.png" alt="Gold Icon" class="gold-icon">
-        <p> <span id="currentDate"></span><strong>&nbsp;Gold Price</strong></p>
-        <h1 class="price-display" id="priceDisplay">Fetching gold price...</h1>
+        <p> <u><span id="currentDate"></span><strong>&nbsp;Gold Price</strong></u></p>
+        <h5 class="price-display" id="priceDisplay"><strong>Fetching gold price...</strong></h5>
+
+
         <button id="refreshButton">Refresh</button>
     </div>
 
@@ -59,10 +62,12 @@
         // Add event listener to refresh button to fetch the gold price again
         document.getElementById('refreshButton').addEventListener('click', fetchGoldPrice);
     </script>
-
+    <br>
+    <br>
     <!-- Year container -->
     <div class="year-container">
-        <h2>Select Year:</h2>
+        <h5><b>Select Year:</b></h5>
+
         <select id="yearSelect" onchange="updateGoldPriceText()">
             <option value="1983">1983</option>
             <option value="1984">1984</option>
@@ -106,11 +111,12 @@
             <option value="2022">2022</option>
             <option value="2023">2023</option>
             <option value="2024">2024</option>
-         </select>
+         </select><br>
         <div class="gold-info-container">
-            <h2 id="goldPriceTitle">Gold Price Information:</h2>
-            <p><strong id="goldPriceText">8 Gram of 22 carat Gold Price in <span id="selectedYear">YYYY</span>:</strong> <span id="22_carat_price">INR -</span></p>
-            <p><strong>CAGR:</strong> <span id="CAGR">-</span></p>
+            <u>
+            <h5 id="goldPriceTitle">Gold Price Information:</h5></u><br>
+            <p><strong id="goldPriceText">8 Gram of 22 carat Gold <br>Price in <span id="selectedYear">YYYY</span>: INR <span id="22_carat_price"> -</span></strong></p>
+            <p><strong>CAGR: <span id="CAGR">-</span></strong></p>
         </div>
     </div>
 
@@ -133,7 +139,7 @@
                 "Gold, like the sun, which melts wax, but hardens clay, expands great souls. - Antoine Rivarol",
                 "In the absence of the gold standard, there is no way to protect savings from confiscation through inflation. - Alan Greenspan",
                 "Gold will be around, gold will be money when the dollar and the euro and the yuan and the ringgit are mere memories. - Richard Russell",
-               // "I don't like gold. I'm just not interested in it. It does not pay a dividend. - Warren Buffett",
+
                 "Gold is the only money that has never failed in the 5,000-year history of its use by humans. - Charles Goyette",
                 "When paper money systems begin to crack at the seams, the run to gold could be explosive. - Harry Browne",
                 "Gold is the most beautiful of all commodities; it is the only one that sheds no blood, it is the only one that does not violate any law. - Mahatma Gandhi",
