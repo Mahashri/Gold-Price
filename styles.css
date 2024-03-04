@@ -19,10 +19,12 @@ body {
 
 .neon-sign {
     font-size: 36px;
-    color: #fff;
-    text-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0, 0 0 30px #00fff0, 0 0 40px #00fff0, 0 0 50px #00fff0, 0 0 60px #00fff0, 0 0 70px #00fff0;
-    animation: neon-flicker 1.5s infinite alternate;
+    background: linear-gradient(to right, #4d49ff, #64c0fa, #ff00cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Change to your desired color */
     margin-top: 20px;
+    font-weight: bold;
     /* Ensure some spacing from the top */
 }
 
