@@ -1,146 +1,146 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Times New Roman', Times, serif;
-    display: flex;
-    flex-direction: column;
-    /* Adjust to column layout */
-    align-items: center;
-    justify-content: flex-start;
-    /* Start content at the top */
-    height: 980px;
-    text-align: center;
-    background-image: linear-gradient(45deg, rgba(255, 215, 0, 0.5), rgba(211, 190, 72, 0.8), rgba(236, 231, 203, 0.5));
-    background-size: cover;
-    overflow: auto;
-    font-size: 15px;
-    /* Add scroll for overflow */
-}
-
-.neon-sign {
-    font-size: 36px;
-    background: linear-gradient(to right, #4d49ff, #64c0fa, #ff00cc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* Change to your desired color */
-    margin-top: 20px;
-    font-weight: bold;
-    /* Ensure some spacing from the top */
-}
-
-
-/* Centering and aligning containers */
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    /* Stack containers */
-    align-items: center;
-    /* Align containers in the middle */
-    width: 100%;
-    /* Use full width for alignment */
-    gap: 20px;
-    /* Space between containers */
-    padding: 20px;
-    /* Padding around content */
-}
-
-.container {
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    /* Adjust width as necessary */
-    margin: 0 auto;
-    /* Center containers */
-}
-
-.year-container {
-    display: flex;
-    flex-direction: column;
-    /* Adjust to column layout */
-    align-items: center;
-    justify-content: flex-start;
-    /* Start content at the top */
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-    width: 300px;
-    height: 300px;
-}
-
-.year-container h4 {
-    margin: 0;
-    margin-bottom: 10px;
-    /* Add margin bottom to create space between h4 and select */
-}
-
-#yearSelect {
-    width: 100%;
-    border-radius: 25px;
-    height: 25px;
-    padding-left: 5px;
-    /* Adjust width to fill the container */
-    font-size: 12px;
-    /* Decrease the font size */
-}
-
-.quote-container {
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-top: 1px solid #ccc;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-}
-
-button {
-    background-color: rgba(0, 123, 255, 0.8);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 10px 20px;
-    font-size: 14px;
-    color: #fff;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-}
-
-button:hover {
-    background-color: rgba(0, 86, 179, 0.8);
-    transform: scale(1.05);
-}
-
-.gold-icon {
-    width: 50px;
-    margin-bottom: 20px;
-}
-
-@media only screen and (max-width: 767px) {
-    .neon-sign {
-        font-size: 25px;
-        /* Smaller font for mobile */
-    }
-    .container,
-    .year-container {
-        width: 250px;
-        /* Adjust width for smaller screens */
-    }
-    .main-content {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Times New Roman', Times, serif;
+        display: flex;
         flex-direction: column;
+        /* Adjust to column layout */
+        align-items: center;
+        justify-content: flex-start;
+        /* Start content at the top */
+        height: 980px;
+        text-align: center;
+        background-image: linear-gradient(45deg, rgba(255, 215, 0, 0.5), rgba(211, 190, 72, 0.8), rgba(236, 231, 203, 0.5));
+        background-size: cover;
+        overflow: auto;
+        font-size: 15px;
+        /* Add scroll for overflow */
     }
-}
+    
+    .neon-sign {
+        font-size: 34px;
+        color: #333;
+        /* Dark color for text */
+        font-weight: bold;
+        text-transform: uppercase;
+        /* Convert text to uppercase */
+        letter-spacing: 2px;
+        /* Increase letter spacing for emphasis */
+        margin-top: 20px;
+        /* Add any additional styling you prefer */
+    }
+    /* Centering and aligning containers */
+    
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        /* Stack containers */
+        align-items: center;
+        /* Align containers in the middle */
+        width: 100%;
+        /* Use full width for alignment */
+        gap: 20px;
+        /* Space between containers */
+        padding: 20px;
+        /* Padding around content */
+    }
+    
+    .container {
+        background-color: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 300px;
+        /* Adjust width as necessary */
+        margin: 0 auto;
+        /* Center containers */
+    }
+    
+    .year-container {
+        display: flex;
+        flex-direction: column;
+        /* Adjust to column layout */
+        align-items: center;
+        justify-content: flex-start;
+        /* Start content at the top */
+        background-color: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+    }
+    
+    .year-container h4 {
+        margin: 0;
+        margin-bottom: 10px;
+        /* Add margin bottom to create space between h4 and select */
+    }
+    
+    #yearSelect {
+        width: 100%;
+        border-radius: 25px;
+        height: 25px;
+        padding-left: 5px;
+        /* Adjust width to fill the container */
+        font-size: 12px;
+        /* Decrease the font size */
+    }
+    
+    .quote-container {
+        background-color: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-top: 1px solid #ccc;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+    
+    button {
+        background-color: rgba(0, 123, 255, 0.8);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 14px;
+        color: #fff;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+    }
+    
+    button:hover {
+        background-color: rgba(0, 86, 179, 0.8);
+        transform: scale(1.05);
+    }
+    
+    .gold-icon {
+        width: 50px;
+        margin-bottom: 20px;
+    }
+    
+    @media only screen and (max-width: 767px) {
+        .neon-sign {
+            font-size: 23px;
+            /* Smaller font for mobile */
+        }
+        .container,
+        .year-container {
+            width: 250px;
+            /* Adjust width for smaller screens */
+        }
+        .main-content {
+            flex-direction: column;
+        }
+    }
