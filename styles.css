@@ -2,109 +2,124 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
-    /* Initial color */
-    animation: pulseBackground 10s infinite alternate;
     display: flex;
+    flex-direction: column;
+    /* Adjust to column layout */
     align-items: center;
-    height: 1050px;
+    justify-content: flex-start;
+    /* Start content at the top */
+    height: 980px;
     text-align: center;
     background-image: linear-gradient(45deg, rgba(255, 215, 0, 0.5), rgba(211, 190, 72, 0.8), rgba(236, 231, 203, 0.5));
-    /* Metallic gold gradient */
-    background-size: 400% 400%;
-    /* Larger background size for animation */
-    animation-name: shimmer;
-    /* Start shimmer animation */
-    animation-duration: 2s;
-    /* Shimmer animation duration */
-    animation-timing-function: ease-in-out;
-    /* Shimmer animation timing function */
-    animation-iteration-count: infinite;
-    /* Shimmer animation iteration count */
+    background-size: cover;
+    overflow: auto;
+    font-size: 15px;
+    /* Add scroll for overflow */
 }
-
-@keyframes shimmer {
-    0% {
-        background-position: 0% 50%;
-        /* Start position for shimmer animation */
-    }
-    100% {
-        background-position: 100% 50%;
-        /* End position for shimmer animation */
-    }
-}
-
-
-/* Neon sign effect */
 
 .neon-sign {
     font-size: 36px;
-    text-align: center;
     color: #fff;
     text-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0, 0 0 30px #00fff0, 0 0 40px #00fff0, 0 0 50px #00fff0, 0 0 60px #00fff0, 0 0 70px #00fff0;
     animation: neon-flicker 1.5s infinite alternate;
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 20px;
+    /* Ensure some spacing from the top */
 }
 
-@keyframes neon-flicker {
-    from {
-        opacity: 0.6;
-    }
-    to {
-        opacity: 1;
-    }
+
+/* Centering and aligning containers */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    /* Stack containers */
+    align-items: center;
+    /* Align containers in the middle */
+    width: 100%;
+    /* Use full width for alignment */
+    gap: 20px;
+    /* Space between containers */
+    padding: 20px;
+    /* Padding around content */
 }
 
 .container {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 300px;
-    transition: all 0.3s ease;
-    margin-top: 140px;
+    padding: 20px;
+    width: 300px;
+    /* Adjust width as necessary */
+    margin: 0 auto;
+    /* Center containers */
 }
 
 .year-container {
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* Adjust to column layout */
+    align-items: center;
+    justify-content: flex-start;
+    /* Start content at the top */
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 300px;
-    margin-top: 150px;
-    margin-left: 300px;
     padding: 20px;
-    text-align: center
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
 }
 
-.price-display {
-    margin: 20px 0;
-    font-size: 20px;
-    color: black;
-    font-weight: bold;
+.year-container h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    /* Add margin bottom to create space between h4 and select */
+}
+
+#yearSelect {
+    width: 100%;
+    border-radius: 25px;
+    height: 25px;
+    padding-left: 5px;
+    /* Adjust width to fill the container */
+    font-size: 12px;
+    /* Decrease the font size */
+}
+
+.quote-container {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 14px;
-    color: #fff;
-    background-color: #007bff;
+    background-color: rgba(0, 123, 255, 0.8);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: rgba(0, 86, 179, 0.8);
     transform: scale(1.05);
 }
 
@@ -113,93 +128,17 @@ button:hover {
     margin-bottom: 20px;
 }
 
-.gold-info-container {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-@keyframes animate {
-    0% {
-        filter: blur(1px);
-        opacity: 5.3;
-    }
-    50% {
-        filter: blur(0.5px);
-        opacity: 3.6;
-    }
-    75% {
-        filter: blur(0px);
-        opacity: 1.3;
-    }
-    100% {
-        filter: blur(0px);
-        opacity: 7.3;
-    }
-}
-
-h2 {
-    font-size: 26px;
-}
-
-
-/* Additional styles for the quotes */
-
-.quote-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-top: 1px solid #ccc;
-    max-height: 200px;
-    overflow-y: auto;
-}
-
-.quote {
-    font-style: italic;
-    margin-bottom: 10px;
-    color: #f31c6e;
-    word-wrap: break-word;
-}
-
-
-/* For mobile view */
-
 @media only screen and (max-width: 767px) {
     .neon-sign {
-        top: 20px;
-        font-size: 24px;
-        /* Adjust the font size as needed */
-        display: inline-block;
+        font-size: 25px;
+        /* Smaller font for mobile */
     }
-    .container {
-        width: 90%;
-        max-width: 90%;
-        margin: 20px auto;
-    }
+    .container,
     .year-container {
-        width: 90%;
-        max-width: 90%;
-        margin: 20px auto;
+        width: 250px;
+        /* Adjust width for smaller screens */
     }
-    .container {
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 300px;
-        margin-top: 200px;
-    }
-    .year-container {
-        padding: 20px;
-        border-radius: 15px;
-        margin-top: 20px;
-        text-align: center;
-        margin-top: 430px;
-        margin-left: 200px;
-        width: 300px;
-    }
-    .quote-container {
-        padding: 10px;
+    .main-content {
+        flex-direction: column;
     }
 }
