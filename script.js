@@ -42,7 +42,7 @@ const goldPrices = {
     2021: { '22_carat_price': 35663.04, '24_carat_price': 48720.00 },
     2022: { '22_carat_price': 38554.44, '24_carat_price': 52670.00 },
     2023: { '22_carat_price': 47821.56, '24_carat_price': 65330.00 },
-    2024: { '22_carat_price': 46320.00, '24_carat_price': 64330.00 }
+    2024: { '22_carat_price': 54140.00, '24_carat_price': 70330.00 }
 };
 
 function calculateCAGR(initialPrice, finalPrice, years) {
